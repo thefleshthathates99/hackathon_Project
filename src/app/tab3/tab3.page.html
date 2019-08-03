@@ -10,12 +10,24 @@
 
     <div *ngIf="checkLogin=='false'; else loggedIn">
         <form (submit)="login()">
-          <h4 style="color:#11C1F3">Username/Email:</h4>
+          <h4>Username/Email:</h4>
             <input type="text" placeholder="Username/Email" [(ngModel)]="username" name="username">
-          <h4 style="color:#11C1F3">Password:</h4>
+          <h4>Password:</h4>
             <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
           <br>
           <br>
+          <ion-list>
+              <ion-item>
+                <ion-label>Courses</ion-label>
+                <ion-select [(ngModel)]="degree" name="degree" okText="Ok" cancelText="Cancel" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+                  <ion-select-option value="bIT">Bachelor of IT</ion-select-option>
+                  <ion-select-option value="bJournalism">Bachelor of Journalism</ion-select-option>
+                  <ion-select-option value="bComputerScience">Bachelor of Computer Science</ion-select-option>
+                  <ion-select-option value="bLanguage">Bachelor of Language and Linguistics</ion-select-option>
+                  <ion-select-option value="bEngineering">Bachelor of Engineering</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
           <ion-button size="large" color="success" type="submit">Login</ion-button>
         </form>
         </div>

@@ -7,191 +7,56 @@
 </ion-header>
 
 <ion-content>
-  <h2>What Events do You want to Focus On?</h2>
+  <h2>What Degree Do You Want to Focus On?</h2>
   <ion-list>
-
-        <ion-radio-group>
-            <ion-item>
-              <ion-label>Social Events</ion-label>
-              <ion-radio slot="start" value="fiu" checked></ion-radio>
-    </ion-item>
-
-    
-        <ion-item>
-          <ion-label>Course Events</ion-label>
-          <ion-radio slot="start" value="biff" checked></ion-radio>
-        </ion-item>
-    
-        <ion-item>
-          <ion-label>Enrolment Events</ion-label>
-          <ion-radio slot="start" value="griff"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
+      <ion-item>
+        <ion-label>Courses</ion-label>
+        <ion-select [(ngModel)]="degree" name="degree" okText="Ok" cancelText="Cancel" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+          <ion-select-option value="bIT">Bachelor of IT</ion-select-option>
+          <ion-select-option value="bJournalism">Bachelor of Journalism</ion-select-option>
+          <ion-select-option value="bComputerScience">Bachelor of Computer Science</ion-select-option>
+          <ion-select-option value="bLanguage">Bachelor of Language and Linguistics</ion-select-option>
+          <ion-select-option value="bEngineering">Bachelor of Engineering</ion-select-option>
+        </ion-select>
+      </ion-item>
     </ion-list>
+  <!-- <ion-list>
+      <ion-radio-group>
+          <ion-item>
+            <ion-label>Social Events</ion-label>
+            <ion-radio slot="start" value="fiu" color="danger"></ion-radio>
+  </ion-item>
+      <ion-item>
+        <ion-label>Course Events</ion-label>
+        <ion-radio slot="start" value="biff" checked color="danger"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Enrolment Events</ion-label>
+        <ion-radio slot="start" value="griff" color="danger"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list> -->
+
     <br>
-    <br>
+
     <ion-button expand="block" color="success"><ion-icon name="add"></ion-icon>CREATE EVENT</ion-button>
     <br>
-    <ion-grid>
-      <ion-row color="danger">
-        <ion-col>
-          Sun
-        </ion-col>
-        <ion-col>
-          Mon
-        </ion-col>
-        <ion-col>
-          Tue
-        </ion-col>
-        <ion-col>
-          Wed
-        </ion-col>
-        <ion-col>
-          Thur
-        </ion-col>
-        <ion-col>
-          Fri
-        </ion-col>
-        <ion-col>
-          Sat
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          1
-        </ion-col>
-        <ion-col>
-          2
-        </ion-col>
-        <ion-col>
-          3
-        </ion-col>
-        <ion-col>
-          4
-        </ion-col>
-        <ion-col>
-          5
-        </ion-col>
-        <ion-col>
-          6
-        </ion-col>
-        <ion-col>
-          7
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          8
-        </ion-col>
-        <ion-col>
-          9
-        </ion-col>
-        <ion-col>
-          10
-        </ion-col>
-        <ion-col>
-          11
-        </ion-col>
-        <ion-col>
-          12
-        </ion-col>
-        <ion-col>
-          13
-        </ion-col>
-        <ion-col>
-          14
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          15
-        </ion-col>
-        <ion-col>
-          16
-        </ion-col>
-        <ion-col>
-          17
-        </ion-col>
-        <ion-col>
-          18
-        </ion-col>
-        <ion-col>
-          19
-        </ion-col>
-        <ion-col>
-          20
-        </ion-col>
-        <ion-col>
-          21
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          22
-        </ion-col>
-        <ion-col>
-          23
-        </ion-col>
-        <ion-col>
-          24
-        </ion-col>
-        <ion-col>
-          25
-        </ion-col>
-        <ion-col>
-          26
-        </ion-col>
-        <ion-col>
-          27
-        </ion-col>
-        <ion-col>
-          28
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          29
-        </ion-col>
-        <ion-col>
-          30
-        </ion-col>
-        <ion-col>
-          31
-        </ion-col>
-        <ion-col>
-          -
-        </ion-col>
-        <ion-col>
-          -
-        </ion-col>
-        <ion-col>
-          -
-        </ion-col>
-        <ion-col>
-          -
-        </ion-col>
-      </ion-row>
-      </ion-grid>
-    
-<br>
-<br>
-
-<ion-list>
-    <ion-item>
-      <ion-label>Project Due(2702ICT): Friday 9:00pm</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Course Update: Census Date on 28th Aug.</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>--</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>--</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>--</ion-label>
-    </ion-item>
+<ion-list *ngFor="let i of eventsData">
+  <div *ngIf="i.relevantDegree == degree">
+      <ion-card routerLink="/event-details" color={{i.recent}}>
+        <ion-card-header>
+          <ion-card-subtitle>{{i.userPosted}}</ion-card-subtitle>
+          <ion-card-title>{{i.eventTitle}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+         {{i.details}}
+  
+        </ion-card-content>
+      </ion-card>
+  </div>
+   
   </ion-list>
  
 </ion-content>

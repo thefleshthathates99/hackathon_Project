@@ -11,8 +11,36 @@ export class Tab1Page {
   constructor() { 
 
   }
+  degree: "";
 
-  calendarHeadings = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  eventsData = [
+    {
+        eventTitle: "IT Stakeholder Networking Seminar",
+        userPosted: "6th August 2019",
+        details: "event details data here",
+        relevantDegree: "bIT",
+        recent: "danger"
+    },
+    {
+      eventTitle: "Computer Science Alumni Meetings",
+      userPosted: "8th August 2019",
+      details: "event details data here",
+      relevantDegree: "bComputerScience",
+      recent: "danger"
+  },
+  {
+      eventTitle: "SEEK.COM International Employability Seminar",
+      userPosted: "15 August 2019",
+      details: "Website attempts to explain employability",
+      relevantDegree: "bLanguage"
+  },
+  {
+      eventTitle: "InfoMechatronics Industry Meetings",
+      userPosted: "29th August 2019",
+      details: "Robot builders welcomed, and indeed expected",
+      relevantDegree: "bEngineering"
+  }
+  ];
   
 
 

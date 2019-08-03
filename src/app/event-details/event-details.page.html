@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>postDetails</ion-title>
+    <ion-title>Event Details</ion-title>
     <ion-buttons slot="start">
         <ion-button routerLink=""><ion-icon name="arrow-back"></ion-icon></ion-button>
         </ion-buttons>
@@ -20,5 +20,17 @@
     <br>
     <br>
     <h2>Comments</h2>
-
+    <ion-list *ngFor="let i of commentsData">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>{{i.userPosted}}</ion-card-subtitle>
+            <ion-card-title>{{i.eventTitle}}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+           {{i.details}}
+    
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
 </ion-content>

@@ -7,7 +7,31 @@
 </ion-header>
 
 <ion-content>
-<ion-button expand="block" color="success"><ion-icon name="add"></ion-icon>CREATE EVENT</ion-button>
+    <ion-list>
+
+        <ion-radio-group>
+            <ion-item>
+              <ion-label>Social Events</ion-label>
+              <ion-radio slot="start" value="fiu" color="danger"></ion-radio>
+    </ion-item>
+
+    
+        <ion-item>
+          <ion-label>Course Events</ion-label>
+          <ion-radio slot="start" value="biff" checked color="danger"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Enrolment Events</ion-label>
+          <ion-radio slot="start" value="griff" color="danger"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <br>
+    <div *ngIf="loginCheck == 'admin'">
+        <ion-button expand="block" color="success"><ion-icon name="add"></ion-icon>CREATE EVENT</ion-button>
+    </div>
+
   <ion-list *ngFor="let i of newsData">
     <ion-card routerLink="/post-details">
       <ion-card-header>
@@ -21,5 +45,4 @@
       </ion-card-content>
     </ion-card>
   </ion-list>
-    
 </ion-content>
