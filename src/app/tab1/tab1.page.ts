@@ -12,7 +12,8 @@ export class Tab1Page {
 
   }
 
-
+  calendarHeadings = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  
 
 
 
