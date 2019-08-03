@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+    <div *ngIf="checkLogin=='false'; else loggedIn">
+        <form (submit)="login()">
+          <h4 style="color:#11C1F3">Username/Email:</h4>
+            <input type="text" placeholder="Username/Email" [(ngModel)]="username" name="username">
+          <h4 style="color:#11C1F3">Password:</h4>
+            <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+          <br>
+          <br>
+          <ion-button size="large" color="success" type="submit">Login</ion-button>
+        </form>
+        </div>
+        <ng-template #loggedIn>
+          <div>
+          <form (submit)="logout()">
+            <ion-button size="large" color="success" type="submit">Logout</ion-button>
+            </form>
+            </div>
+        </ng-template>
+</ion-content>
