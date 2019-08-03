@@ -41,14 +41,14 @@ export class Tab3Page {
     this.storage.set("username", "");
     this.storage.set('checkLogin', "");
     
-    if (this.username == "admin" && this.password == "admin"){
+    if (this.username == "s5072430" && this.password == "admin"){
       this.storage.set("username", "Zane (Admin)");
       this.storage.set("degree", this.degree);
       this.checkLogin = "true";
       this.storage.set('checkLogin', "admin");
       console.log("succc");
     }
-    if (this.username == "user" && this.password == "DoIt"){
+    if (this.username == "s102496" && this.password == "DoIt"){
       this.storage.set("username", "Arin Hanson (Student)");
       this.storage.set("degree", this.degree);
       this.checkLogin = "true";
