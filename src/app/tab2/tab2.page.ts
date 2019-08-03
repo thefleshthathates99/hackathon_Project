@@ -22,28 +22,24 @@ export class Tab2Page {
 
   newsData = [
     {
-        eventTitle: "Study Sesh",
-        userPosted: "Derrick McGowan",
-        details: "event details data here",
-        relevantDegree: "bIT"
+        eventTitle: "Hackathon",
+        userPosted: "Griffith University",
+        details: "event details data here"
     },
     {
-      eventTitle: "Alumni Soiree",
-      userPosted: "Allan McCuen",
-      details: "event details data here",
-      relevantDegree: "bComputerScience"
+      eventTitle: "Hays Recruitment: Looking for IT Graduates",
+      userPosted: "Hays Recruitment",
+      details: "event details data here"
   },
   {
-      eventTitle: "Looking for Tutour",
-      userPosted: "Geoffery CuddleTrousers",
-      details: "I am bad at study, plz halp",
-      relevantDegree: "bLanguage"
+      eventTitle: "Ironbark Software: Looking for Developers",
+      userPosted: "Ironbark Software",
+      details: "event details data here"
   },
   {
-      eventTitle: "Hackathon",
-      userPosted: "Yogg'Sathtoth",
-      details: "Looking for a team for the Hackathon",
-      relevantDegree: "bEngineering"
+      eventTitle: "MedicTech: Look for Surgeons",
+      userPosted: "Griffith - MedicTech",
+      details: "event details data here"
   }
   ];
 

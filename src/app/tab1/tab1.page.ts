@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Calendar } from '@ionic-native/calendar/ngx';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-tab1',
@@ -8,8 +9,12 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 })
 export class Tab1Page {
 
-  constructor() { 
+    loginCheck = "";
 
+  constructor(private storage: Storage) { 
+    storage.get("checkLogin").then(val => {
+        this.loginCheck = val;
+      });
   }
   degree: "";
 
