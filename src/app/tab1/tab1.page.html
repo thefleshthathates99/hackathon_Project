@@ -41,7 +41,7 @@
     <br>
 
     <div *ngIf="loginCheck == 'admin'">
-        <ion-button expand="block" color="success"><ion-icon name="add"></ion-icon>CREATE EVENT</ion-button>
+        <ion-button expand="block" color="success" routerLink="/event-creation"><ion-icon name="add"></ion-icon>CREATE EVENT</ion-button>
     </div>
     <br>
 <ion-list *ngFor="let i of eventsData">

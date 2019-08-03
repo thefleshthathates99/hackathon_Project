@@ -24,22 +24,22 @@ export class Tab2Page {
     {
         eventTitle: "Hackathon",
         userPosted: "Griffith University",
-        details: "event details data here"
+        details: "employment details data here"
     },
     {
       eventTitle: "Hays Recruitment: Looking for IT Graduates",
       userPosted: "Hays Recruitment",
-      details: "event details data here"
+      details: "employment details data here"
   },
   {
       eventTitle: "Ironbark Software: Looking for Developers",
       userPosted: "Ironbark Software",
-      details: "event details data here"
+      details: "employment details data here"
   },
   {
       eventTitle: "MedicTech: Look for Surgeons",
       userPosted: "Griffith - MedicTech",
-      details: "event details data here"
+      details: "employment details data here"
   }
   ];
 
