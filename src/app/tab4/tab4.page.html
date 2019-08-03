@@ -5,4 +5,10 @@
 </ion-header>
 
 <ion-content>
+    <ion-card  *ngFor="let job of jobs; let i = index">
+        <ion-item>
+          <ion-label>{{ job.title }}</ion-label>
+          <ion-button (click)="presentModal(i)" fill="outline" slot="end">View</ion-button>
+        </ion-item>
+        </ion-card>
 </ion-content>

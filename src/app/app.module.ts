@@ -8,8 +8,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JobModalPage } from './job-modal/job-modal.page';
 
 @NgModule({
+<<<<<<< HEAD
   declarations: [AppComponent],
   entryComponents: [],
   imports: 
@@ -20,6 +22,11 @@ import { AppComponent } from './app.component';
     IonicModule.forRoot(), 
     AppRoutingModule
   ],
+=======
+  declarations: [AppComponent, JobModalPage],
+  entryComponents: [JobModalPage],
+  imports: [IonicStorageModule.forRoot(), BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+>>>>>>> 43a368fc3f4e6e6d01c4bfd6abda255c41121b7b
   providers: [
     StatusBar,
     SplashScreen,
