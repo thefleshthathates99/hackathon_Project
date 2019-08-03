@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ job.title }}</ion-title>
+    <ion-button (click)="closeModal()" fill="outline" slot="end">Close</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+      <ion-label>Employer: {{ job.hirer }}</ion-label>
+      </ion-item>
+      <ion-item>
+      <ion-label>Description: {{ job.description }}</ion-label>
+      </ion-item>
+  
+</ion-content>
