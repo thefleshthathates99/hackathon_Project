@@ -51,6 +51,16 @@ const routes: Routes = [
               import('../tab4/tab4.module').then(m => m.Tab4PageModule)
           }
         ]
+      },
+      {
+        path: 'settings',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../settings/settings.module').then(m => m.SettingsPageModule)
+          }
+        ]
       }
     ]
   },
