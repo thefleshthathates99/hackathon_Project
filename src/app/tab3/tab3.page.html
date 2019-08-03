@@ -9,11 +9,16 @@
 <ion-content>
 
     <div *ngIf="checkLogin=='false'; else loggedIn">
+      
         <form (submit)="login()">
-          <h4>Username/Email:</h4>
-            <input type="text" placeholder="Username/Email" [(ngModel)]="username" name="username">
-          <h4>Password:</h4>
+            <ion-card class="loginForm">
+          <h4 class="loginLabel">Student Number:</h4>
+            <input type="text" placeholder="Student Number" [(ngModel)]="username" name="username">
+          </ion-card>
+        <ion-card class="loginForm">
+          <h4 class="loginLabel">Password:</h4>
             <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+          </ion-card>
           <br>
           <br>
           <ion-list>
@@ -28,11 +33,13 @@
                 </ion-select>
               </ion-item>
             </ion-list>
+            <ion-card class="loginForm">
           <ion-button size="large" color="success" type="submit">Login</ion-button>
+            </ion-card>
         </form>
         </div>
         <ng-template #loggedIn>
-          <div>
+            <div class="loginButton">
           <form (submit)="logout()">
             <ion-button size="large" color="success" type="submit">Logout</ion-button>
             </form>

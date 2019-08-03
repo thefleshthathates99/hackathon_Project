@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
-
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-tab3',
@@ -9,12 +10,30 @@ import { Storage } from '@ionic/storage';
 })
 export class Tab3Page {
 
-  constructor(private storage: Storage) {}
+    collectedDegrees = Observable;
+    foundDegrees;
+    returnDegrees = [];
 
+  constructor(private storage: Storage, public httpClient: HttpClient) {
+    // this.collectedDegrees = this.httpClient.get('https://degrees.griffith.edu.au/rest-api/v3/programTitles?keyword=Bachelor&studentType=Domestic&academicCareerNames=Undergraduate&currentPage=10&pageSize=10');
+    // this.collectedDegrees
+    // .subscribe(data => {
+    //   console.log(data);
+    //   this.foundDegrees = data;
+    //   for(let jj = 0; jj < this.foundDegrees.records.length; jj++){
+    //     this.returnDegrees.push(this.foundDegrees.records[jj].title)
+    //   }
+    //   console.log(this.returnDegrees);
+    // });
+    
+  }
+    
    username = "";
    password = "";
    degree = "";
    checkLogin = "false";
+   
+   
 
    login(){
     this.storage.remove("username");

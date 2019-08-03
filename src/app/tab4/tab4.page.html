@@ -1,9 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Jobs & Internships</ion-title>
+    <ion-title class="title">Employment</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-button (click)="navigateToSettings()" shape="round">Settings</ion-button>
+    <ion-card  *ngFor="let job of jobs; let i = index">
+        <ion-item>
+          <ion-label>{{ job.title }}</ion-label>
+          <ion-button (click)="presentModal(i)" fill="outline" slot="end">View</ion-button>
+        </ion-item>
+        </ion-card>
 </ion-content>
