@@ -8,7 +8,8 @@ const routes: Routes = [
   },
   { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' },
   { path: 'post-details', loadChildren: './post-details/post-details.module#PostDetailsPageModule' },
-  { path: 'event-details', loadChildren: './event-details/event-details.module#EventDetailsPageModule' }
+  { path: 'event-details', loadChildren: './event-details/event-details.module#EventDetailsPageModule' },  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' }
+
 ];
 @NgModule({
   imports: [

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { SettingsPage } from './../settings/settings.page';
+// import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'app-tab4',
@@ -19,5 +21,9 @@ export class Tab4Page implements OnInit {
       userType: "new"
   }
 ];
+
+// navigateToSettings(): void {
+//   this.navCtrl.push(SettingsPage);
+// }
 
 }
