@@ -21,7 +21,7 @@
           </ion-card>
           <br>
           <br>
-          <ion-list>
+          <!-- <ion-list>
               <ion-item>
                 <ion-label>Courses</ion-label>
                 <ion-select [(ngModel)]="degree" name="degree" okText="Ok" cancelText="Cancel" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
@@ -32,16 +32,16 @@
                   <ion-select-option value="bEngineering">Bachelor of Engineering</ion-select-option>
                 </ion-select>
               </ion-item>
-            </ion-list>
+            </ion-list> -->
             <ion-card class="loginForm">
-          <ion-button size="large" color="success" type="submit">Login</ion-button>
+          <ion-button size="large" color="danger" type="submit"><ion-icon name="log-in"></ion-icon>Login</ion-button>
             </ion-card>
         </form>
         </div>
         <ng-template #loggedIn>
             <div class="loginForm">
           <form (submit)="logout()">
-            <ion-button size="large" color="success" type="submit">Logout</ion-button>
+            <ion-button size="large" color="danger" type="submit">Logout</ion-button>
             </form>
             </div>
         </ng-template>
