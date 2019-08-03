@@ -7,16 +7,19 @@
 </ion-header>
 
 <ion-content>
-
+<ion-button expand="block" color="success"><ion-icon name="add"></ion-icon>CREATE EVENT</ion-button>
+  <ion-list *ngFor="let i of newsData">
     <ion-card routerLink="/post-details">
-        <ion-card-header>
-          <ion-card-subtitle>Meet at N1.18</ion-card-subtitle>
-          <ion-card-title>Study Sesh</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-         Event Details
+      <ion-card-header>
+        <ion-card-subtitle>{{i.userPosted}}</ion-card-subtitle>
+        <ion-card-title>{{i.eventTitle}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+       {{i.details}}
 
-        </ion-card-content>
-      </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+    
 </ion-content>
