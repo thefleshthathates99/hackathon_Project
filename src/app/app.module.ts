@@ -13,7 +13,7 @@ import { JobModalPage } from './job-modal/job-modal.page';
 @NgModule({
   declarations: [AppComponent, JobModalPage],
   entryComponents: [JobModalPage],
-  imports: [IonicStorageModule.forRoot(), BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [IonicStorageModule.forRoot(), BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
