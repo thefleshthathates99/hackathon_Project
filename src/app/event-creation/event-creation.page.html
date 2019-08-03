@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Event</ion-title>
+    <ion-buttons slot="start">
+        <ion-button routerLink=""><ion-icon name="arrow-back"></ion-icon></ion-button>
+        </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form (submit)="eventSubmit()">
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="date" name="date"></ion-datetime>
+          </ion-item>
+          <ion-item>
+              <ion-label clearInput position="floating">Title</ion-label>
+              <ion-input [(ngModel)]="title" name="title"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label clearInput position="floating">Details</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+              <ion-item>
+                        <ion-label>Relevant Course</ion-label>
+                        <ion-select [(ngModel)]="degree" name="degree" okText="Ok" cancelText="Cancel" [interfaceOptions]="customActionSheetOptions" interface="action-sheet">
+                          <ion-select-option value="Bachelor of IT">Bachelor of IT</ion-select-option>
+                          <ion-select-option value="Bachelor of Journalism">Bachelor of Journalism</ion-select-option>
+                          <ion-select-option value="Bachelor of Computer Science">Bachelor of Computer Science</ion-select-option>
+                          <ion-select-option value="Bachelor of Language and Linguistics">Bachelor of Language and Linguistics</ion-select-option>
+                          <ion-select-option value="Bachelor of Engineering">Bachelor of Engineering</ion-select-option>
+                        </ion-select>
+                </ion-item>
+                <br>
+                <br>
+                <ion-button size="large" shape="round" color="danger" type="submit"><ion-icon name="download"></ion-icon>Submit</ion-button>
+    </form>
+</ion-content>
