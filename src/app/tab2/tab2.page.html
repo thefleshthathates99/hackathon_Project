@@ -35,7 +35,8 @@
   <ion-list *ngFor="let i of newsData">
     <ion-card routerLink="/post-details">
       <ion-card-header>
-        <ion-card-subtitle>{{i.userPosted}}</ion-card-subtitle>
+        <ion-card-subtitle style="font-size: 14px;">{{i.userPosted}}</ion-card-subtitle>
+        <ion-card-subtitle class="posted"><ion-icon icon="contact"></ion-icon> {{i.user}}</ion-card-subtitle>
         <ion-card-title>{{i.eventTitle}}</ion-card-title>
       </ion-card-header>
     

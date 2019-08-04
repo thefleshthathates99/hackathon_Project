@@ -24,21 +24,25 @@ export class Tab2Page {
     {
         eventTitle: "Hackathon",
         userPosted: "Griffith University",
+        user: "Jacob Stanley",
         details: "employment details data here"
     },
     {
       eventTitle: "Hays Recruitment: What Tech employers are looking for!",
       userPosted: "Hays Recruitment",
+      user: "Cheryl Daniels",
       details: "employment details data here"
   },
   {
       eventTitle: "Griffith Research: The latest in Griffith IT and Computer Science Research",
       userPosted: "Ironbark Software",
+      user: "Michael Quick",
       details: "employment details data here"
   },
   {
       eventTitle: "Griffith MedicTech: Advancements made in 2019",
       userPosted: "Griffith - MedicTech",
+      user: "Christine Arnold",
       details: "employment details data here"
   }
   ];
