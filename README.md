@@ -1,7 +1,7 @@
 # Hackathon Project
 ___
-##Install
+## Install
 To install, make sure you have Node.js, angular and the ionic-CLI tool, then run `npm i` to install all dependencies.
 ___
-##Run
+## Run
 To run, use `ionic serve -l`
