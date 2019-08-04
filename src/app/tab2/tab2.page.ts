@@ -27,17 +27,17 @@ export class Tab2Page {
         details: "employment details data here"
     },
     {
-      eventTitle: "Hays Recruitment: Looking for IT Graduates",
+      eventTitle: "Hays Recruitment: What Tech employers are looking for!",
       userPosted: "Hays Recruitment",
       details: "employment details data here"
   },
   {
-      eventTitle: "Ironbark Software: Looking for Developers",
+      eventTitle: "Griffith Research: The latest in Griffith IT and Computer Science Research",
       userPosted: "Ironbark Software",
       details: "employment details data here"
   },
   {
-      eventTitle: "MedicTech: Look for Surgeons",
+      eventTitle: "Griffith MedicTech: Advancements made in 2019",
       userPosted: "Griffith - MedicTech",
       details: "employment details data here"
   }
