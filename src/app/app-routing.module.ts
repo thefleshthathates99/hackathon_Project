@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'event-details', loadChildren: './event-details/event-details.module#EventDetailsPageModule' },
   { path: 'event-creation', loadChildren: './event-creation/event-creation.module#EventCreationPageModule' },
   { path: 'employment-post-creation', loadChildren: './employment-post-creation/employment-post-creation.module#EmploymentPostCreationPageModule' },
-  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' }
+  { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' }
+
 ];
 @NgModule({
   imports: [
