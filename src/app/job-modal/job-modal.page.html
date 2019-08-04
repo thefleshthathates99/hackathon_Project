@@ -10,6 +10,9 @@
   </ion-card>
   <ion-card class="borderless">
       <ion-label><strong>Employer:</strong> {{ job.hirer }}</ion-label>
+      <ion-list>
+        <ion-label class="posted">Posted by: {{ job.posted }}</ion-label>
+      </ion-list>
       </ion-card>
       <ion-card class="borderless">
       <ion-label><strong>Description:</strong> {{ job.description }}</ion-label>
@@ -23,7 +26,7 @@
             </ul>
           </ion-card-content>
           </ion-card>
-          <ion-card>
+          <ion-card class="borderless">
             <ion-button size="large" color="danger" type="submit">Apply</ion-button>
               </ion-card>
   
